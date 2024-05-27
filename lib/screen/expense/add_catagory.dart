@@ -60,8 +60,9 @@ class _AddCatagoryFragmentState extends State<AddCatagoryFragment> {
       ),
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: Theme.of(context).colorScheme.background),
+            // borderRadius: BorderRadius.circular(20),
+            // color: Theme.of(context).colorScheme.background
+            ),
         padding: const EdgeInsets.all(16),
         child: Column(
           mainAxisSize: MainAxisSize.min,

@@ -4,6 +4,7 @@ import 'package:expense_tracker/screen/expense/add_catagory.dart';
 import 'package:expense_tracker/widgets/notification.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AddExpense extends StatelessWidget {
@@ -110,7 +111,23 @@ class AddExpense extends StatelessWidget {
                     height: 20,
                   ),
                   TextFormField(
-                    onTap: () {},
+                    onTap: () async {
+                      showDatePicker(
+                        context: context,
+                        // initialDate: selectedDate,
+                        initialDatePickerMode: DatePickerMode.day,
+                        // initialEntryMode = DatePickerEnt
+                        firstDate: DateTime(2000),
+                        lastDate: DateTime(2025),
+                      );
+
+                      // var datePicked = await
+
+                      // final snackBar =
+                      //     SnackBar(content: Text("Date Picked $datePicked"));
+                      // ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    },
+                    readOnly: true,
                     decoration: InputDecoration(
                       hintText: "today",
                       filled: true,
