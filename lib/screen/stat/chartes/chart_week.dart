@@ -1,6 +1,4 @@
-import 'dart:math';
-import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter/material.dart';
+import '../../../core/utility/app_export.dart';
 
 class MyChartWeek extends StatefulWidget {
   const MyChartWeek({super.key});

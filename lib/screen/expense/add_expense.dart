@@ -1,11 +1,6 @@
-import 'dart:math';
-
-import 'package:expense_tracker/screen/expense/add_catagory.dart';
-import 'package:expense_tracker/widgets/notification.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../core/utility/app_export.dart';
 
 class AddExpense extends StatelessWidget {
   const AddExpense({super.key});
@@ -112,7 +107,7 @@ class AddExpense extends StatelessWidget {
                   ),
                   TextFormField(
                     onTap: () async {
-                      showDatePicker(
+                      var timeresult = showDatePicker(
                         context: context,
                         // initialDate: selectedDate,
                         initialDatePickerMode: DatePickerMode.day,
@@ -123,9 +118,9 @@ class AddExpense extends StatelessWidget {
 
                       // var datePicked = await
 
-                      // final snackBar =
-                      //     SnackBar(content: Text("Date Picked $datePicked"));
-                      // ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      final snackBar =
+                          SnackBar(content: Text("Date Picked $timeresult"));
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     },
                     readOnly: true,
                     decoration: InputDecoration(
@@ -146,34 +141,38 @@ class AddExpense extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              width: double.infinity,
-              height: kToolbarHeight,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  // shape: BoxShape.circle,
-                  borderRadius: BorderRadiusDirectional.circular(15),
-                  gradient: LinearGradient(colors: [
-                    Theme.of(context).colorScheme.primary,
-                    Theme.of(context).colorScheme.secondary,
-                    Theme.of(context).colorScheme.tertiary,
-                  ], transform: const GradientRotation(pi / 4))),
-              child: SizedBox(
-                width: double.infinity,
-                height: kToolbarHeight,
-                child: TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    style: TextButton.styleFrom(
-                        backgroundColor: Colors.transparent),
-                    child: const Text("Save",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white))),
-              ),
-            ),
+            CustomButton(
+              onPressed: () {},
+              title: 'Save',
+            )
+            // Container(
+            //   width: double.infinity,
+            //   height: kToolbarHeight,
+            //   alignment: Alignment.center,
+            //   decoration: BoxDecoration(
+            //       // shape: BoxShape.circle,
+            //       borderRadius: BorderRadiusDirectional.circular(15),
+            //       gradient: LinearGradient(colors: [
+            //         Theme.of(context).colorScheme.primary,
+            //         Theme.of(context).colorScheme.secondary,
+            //         Theme.of(context).colorScheme.tertiary,
+            //       ], transform: const GradientRotation(pi / 4))),
+            //   child: SizedBox(
+            //     width: double.infinity,
+            //     height: kToolbarHeight,
+            //     child: TextButton(
+            //         onPressed: () {
+            //           Navigator.pop(context);
+            //         },
+            //         style: TextButton.styleFrom(
+            //             backgroundColor: Colors.transparent),
+            //         child: const Text("Save",
+            //             style: TextStyle(
+            //                 fontSize: 20,
+            //                 fontWeight: FontWeight.w700,
+            //                 color: Colors.white))),
+            //   ),
+            // ),
           ],
         ),
       ),

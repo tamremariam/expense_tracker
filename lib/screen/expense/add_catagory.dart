@@ -5,6 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../widgets/custom_Button.dart';
+
 class AddCatagoryFragment extends StatefulWidget {
   const AddCatagoryFragment({
     super.key,
@@ -60,9 +62,8 @@ class _AddCatagoryFragmentState extends State<AddCatagoryFragment> {
       ),
       child: Container(
         decoration: BoxDecoration(
-            // borderRadius: BorderRadius.circular(20),
-            // color: Theme.of(context).colorScheme.background
-            ),
+            borderRadius: BorderRadius.circular(20),
+            color: Theme.of(context).colorScheme.background),
         padding: const EdgeInsets.all(16),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -205,34 +206,11 @@ class _AddCatagoryFragmentState extends State<AddCatagoryFragment> {
                     ),
                   ),
                 ),
-                Container(
-                  width: double.infinity,
-                  height: kToolbarHeight,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                      // shape: BoxShape.circle,
-                      borderRadius: BorderRadiusDirectional.circular(15),
-                      gradient: LinearGradient(colors: [
-                        Theme.of(context).colorScheme.primary,
-                        Theme.of(context).colorScheme.secondary,
-                        Theme.of(context).colorScheme.tertiary,
-                      ], transform: const GradientRotation(pi / 4))),
-                  child: SizedBox(
-                    width: double.infinity,
-                    height: kToolbarHeight,
-                    child: TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        style: TextButton.styleFrom(
-                            backgroundColor: Colors.transparent),
-                        child: const Text("Save",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white))),
-                  ),
-                ),
+                //--- ----------------------------------------------------------------
+                CustomButton(
+                  onPressed: () {},
+                  title: 'Save',
+                )
               ],
             )
             // ),

@@ -1,5 +1,4 @@
-import 'package:expense_tracker/app_view.dart';
-import 'package:flutter/material.dart';
+import 'core/utility/app_export.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

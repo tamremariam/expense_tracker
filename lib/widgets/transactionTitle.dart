@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../core/utility/app_export.dart';
 
 class transactionTitle extends StatelessWidget {
   final String firsTitle;

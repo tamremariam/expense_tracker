@@ -1,5 +1,7 @@
-import 'package:expense_tracker/screen/home/home_screen.dart';
-import 'package:flutter/material.dart';
+//
+// import 'package:flutter/material.dart';
+
+import 'core/utility/app_export.dart';
 
 class AppView extends StatelessWidget {
   const AppView({super.key});
